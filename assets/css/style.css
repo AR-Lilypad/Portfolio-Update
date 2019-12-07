@@ -88,20 +88,6 @@ div.navcontainer {
     color: #fff;
     
   }
-.nav a {
-  color: #777;
-  padding: 5px;
-  margin-left: 2em;
-  text-decoration: none;
-  transition: 0.5s ease;
-            }
-
-.nav a:hover {
-  background-color: #17a2b8;
-  padding: 5px;
-  color: #fff;
-  
-}
 
 main {
     max-width: 960px;
@@ -118,21 +104,6 @@ main {
 .bio {
     padding: 15px 15px 15px 25px;
     line-height: 1.5em;
-}
-
-.credit p{
-  font-size: 9px;
-  font-style: italic;
-  text-align: right;
-}
-
-.credit a {
-  font-size: 9px;
-  font-style: italic;
-  color: #17a2b8;
-  text-align: right;
-  text-decoration: none;
-
 }
 
 .profilePic  {
@@ -155,14 +126,34 @@ main {
 }    
 
 /*  portfolio images */
-img {
-    float: left;
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  max-width: 50%;
+  padding: 30px 10px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.gallery img {
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin: 15px 50px 15px 50px;
+    margin: 15px 25px 25px 25px;
     padding: 5px;
-    width: 200px;
-    height: 200px;
+    width: 275px;
+    height: 275px;
 }
 
 img:hover {
@@ -188,12 +179,12 @@ img:hover {
     color: #fff;
     }
   
-  .hangman {
-    top: -555px;
-    left: 19px;
+  .crystal {
+    top: -46px;
+    left: 23px;
   }
   
-  .rgbGame{
+  .giphy{
     top: -610px;  
     left: 323px;
   }
@@ -203,14 +194,19 @@ img:hover {
     left: 19px;
   }
 
-  .infoWidget {
+  .trainSched {
     top: -485px;
     left: 323px;
   }
 
-  .rockPaperScissors {
+  .bluesTrivia {
     top: -304px;
     left: 20px;
+  }
+
+  .weatherWear {
+    top: -359px;
+    left: 323px;
   }
 
 /* contact page */
@@ -224,8 +220,12 @@ img:hover {
     background-color: #f4fcff;
   }
 
-  nameInput {
-    padding-right: 100px;
+  #nameInput, #emailInput {
+    padding-right: 350px;
+  }
+
+  #messageArea{
+    padding-right: 375px;
   }
 
   #submit_button {
@@ -266,6 +266,22 @@ footer p {
 }
 
 /*  Responsive design */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 
 @media (max-width: 980px) {
 
@@ -310,7 +326,11 @@ margin: 6% 2% 2% 2%;
 }
 
 @media (max-width: 375px) {
- .nav { 
+ .navcontainer {
+   width: 100%;
+ }
+ 
+  .nav { 
   width: 100%; 
   margin: auto; 
   background-color: #17a2b8;
@@ -319,15 +339,22 @@ margin: 6% 2% 2% 2%;
  
  .navlogo {
   width: 100%;
-  margin: auto;
+  margin: 0;
+  
+ }
+
+ .nav {
+   width: 100%;
+   margin: -5px 0 15px 0;
+   padding-right: 15px;
+   background-color: #fff;
  }
  
  .nav li { 
- padding-right: 15px;
+ padding-right: 5px;
+ float: left;
  }
  
-.gallery {}
-
 #nameInput  {
     width: 300px;
 }
@@ -340,3 +367,14 @@ margin: 6% 2% 2% 2%;
     width:  300px;
 }
   
+/*  portfolio images */
+
+.gallery 
+
+table  
+
+
+
+
+
+}
